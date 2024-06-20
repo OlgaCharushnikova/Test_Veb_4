@@ -2,24 +2,7 @@ from BaseApp import BasePage
 from selenium.webdriver.common.by import By
 import logging
 import yaml
-import requests
 
-
-class Test_API:
-
-    def requests(self, login, title, description, content, find_description):
-        with open("./testdata.yaml") as f:
-            testdata = yaml.safe_load(f)
-        try:
-            res1 = requests.post(testdata["address2"],
-                             params={"title": title, "description": description, "content": content}, headers={"X-Auth-Token": login})
-            res2 = requests.get(testdata["address2"],
-                                params={"description": find_description}, headers={"X-Auth-Token": login})
-        except:
-            logging.exception(f"Exception of requests")
-            return None
-        logging.debug(f"Requests post and get")
-        return res1 and res2
 class TestSearchLocators:
     ids = dict()
     with open("./locators.yaml") as f:
