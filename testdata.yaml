@@ -1,0 +1,11 @@
+address: https://test-stand.gb.ru
+address1: https://test-stand.gb.ru/gateway/login
+address2: https://test-stand.gb.ru/api/posts
+sleep_time: 1
+browser: chrome
+wait: 3
+username: Olga111
+password: 28309a4769
+post_title: Title2
+post_description: Description
+post_content: Content
